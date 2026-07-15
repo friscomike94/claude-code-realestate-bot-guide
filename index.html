@@ -86,7 +86,7 @@ ul.bul li .sub{display:block;color:var(--mut);font-size:1.12vw;margin-top:.22vw}
 /* unified slide system */
 #themeToggle{position:absolute;right:2.2%;top:2.1%;z-index:50;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);border-radius:999px;padding:.55vw .85vw;font:700 .85vw Pretendard,sans-serif;cursor:pointer;display:flex;align-items:center;gap:.4vw}
 .topbar{padding-right:8vw}
-.keyline{margin:.1vw 0 1.2vw!important;padding:.75vw 1.15vw!important;border:1px solid rgba(200,250,70,.28)!important;border-left:3px solid var(--lime)!important;background:rgba(200,250,70,.07)!important;color:var(--ink)!important;font-size:1.08vw!important;line-height:1.45!important}
+.keyline{margin:.1vw 0 1.2vw!important;padding:.75vw 1.15vw!important;border:1px solid rgba(200,250,70,.28)!important;border-left:3px solid var(--lime)!important;background:rgba(200,250,70,.07)!important;color:var(--ink)!important;font-size:1.27vw!important;line-height:1.42!important}
 #pipelineNav{position:absolute;z-index:30;left:18%;right:18%;bottom:4.1%;display:flex;align-items:center;justify-content:center;gap:.35vw}
 .pipeStep{display:flex;align-items:center;gap:.35vw;font-size:.72vw;font-weight:750;color:var(--mut2);white-space:nowrap}
 .pipeStep:not(:last-child)::after{content:'›';color:var(--line2);font-size:.9vw;margin-left:.25vw}
@@ -97,6 +97,15 @@ ul.bul li .sub{display:block;color:var(--mut);font-size:1.12vw;margin-top:.22vw}
 .result-split{display:grid;grid-template-columns:1fr 1fr;gap:1.2vw;min-height:0}.result-card{background:var(--bg2);border:1px solid var(--line2);border-radius:14px;padding:1vw;min-height:0}.result-card h3{font-size:1.2vw;margin-bottom:.65vw;display:flex;justify-content:space-between}.result-card h3 span{color:var(--lime);font-size:.85vw}.result-card .visual{height:25vw;max-height:470px;background:#0a0b0d;border-radius:9px;overflow:hidden;display:flex;align-items:center;justify-content:center}.result-card img{width:100%;height:100%;object-fit:contain}
 .pages-steps .shot img{height:15vw;max-height:280px;object-fit:contain;background:#0c0d10}.pages-steps .shot .cap{min-height:2.4vw;display:flex;align-items:center}
 .stackshots{display:grid;grid-template-rows:1fr 1fr;gap:.7vw}.stackshots .shot img{height:11vw;max-height:205px;object-fit:contain;background:#0c0d10}.stackshots .shot .cap{font-size:.78vw}
+
+.light ul.bul li b,.light .ccard .ct,.light .result-card h3,.light .title-badge,.light .part,.light .crumb,.light .crumb b,.light .chip,.light .chip b,.light .kvrow,.light .fbox .ft,.light .pnode .pt{color:var(--ink)!important}
+.light .ccard .cd,.light .pnode .pd,.light .fbox .fd,.light .shot .cap,.light #foot,.light .pipeStep{color:var(--mut)!important}
+.light .prompt .tag,.light .code .hl,.light .code .k,.light .tree .hl,.light .tree .dir,.light .kvrow .kname{color:#111310!important}
+.light .kind.step{color:#111310!important;background:#fff!important;border:1px solid #111310!important}
+.light .kind.intro,.light .kind.concept{color:#111310!important;background:#fff!important;border-color:#111310!important}
+.light .copyBtn{color:#111310;background:#fff;border-color:#777}
+.repo-shot{max-width:82%;justify-self:center}.repo-shot img{max-height:19vw;object-fit:contain;background:#0c0d10}
+
 /* light mode */
 #stage.light{--bg:#f3f4ef;--bg2:#ffffff;--bg3:#e9ebe5;--line:#d8dbd1;--line2:#c5c9bd;--ink:#151713;--mut:#676b61;--mut2:#92978c;--lime:#111310;--lime-dim:#2d3029;background:#f3f4ef}.light .glow{background:radial-gradient(60% 45% at 85% -10%,rgba(0,0,0,.07),transparent 60%)}.light .keyline{background:rgba(0,0,0,.035)!important;border-color:rgba(0,0,0,.24)!important}.light .pnode.hot,.light .ccard.lime,.light .fbox.hot{background:rgba(0,0,0,.035)!important;border-color:#111310!important}
 .light h1,.light h2,.light h3,.light .lead{color:var(--ink)}.light ul.bul li,.light .prompt p,.light .kvrow .kval{color:#30332d}.light .code,.light .tree{background:#eceee8;color:#33451c}.light .note,.light .prompt,.light .ccard,.light .pnode,.light .fbox,.light .kvrow,.light .result-card{box-shadow:none}.light .shot{background:#fff}.light .chip{background:#fff}.light #themeToggle{background:#fff}.light .tg{filter:none}
@@ -230,7 +239,7 @@ const S=[
 <li><span class="mk">1</span><span>GitHub 웹에서 <b>New repository</b>로 <b>빈 레포</b> 먼저 생성<span class="sub">이름 입력 · Public → Create (오른쪽 화면)</span></span></li>
 <li><span class="mk">2</span><span>만든 레포의 <b>주소(URL)</b> 복사<span class="sub">주소창 또는 초록 <b>Code</b> 버튼에서 복사</span></span></li>
 <li><span class="mk">3</span><span>Claude Code에게 <b>URL을 주고 "올려줘"</b><span class="sub">git 명령은 Claude가 대신 실행</span></span></li></ul>
-<div class="shot"><img src="${IMG.newrepo}" alt="새 레포 만들기"><div class="cap">① New repository → 이름·Public → Create</div></div></div>
+<div class="shot repo-shot"><img src="${IMG.newrepo}" alt="새 레포 만들기"><div class="cap">① New repository → 이름·Public → Create</div></div></div>
 <div class="prompt"><div class="tag">▎3단계 — Claude Code 에 이렇게 입력</div><p>"이 GitHub 레포에 지금 코드를 올려줘: <span class="hl">https://github.com/내아이디/realestate-bot</span>"</p></div>
 <div class="note">헷갈리기 쉬운 순서 — <b>레포는 GitHub 웹에서 먼저 만들고</b>, 그 <b>주소(URL)를 복사해 Claude에게</b> 줍니다. init·commit·push는 Claude가 알아서 해요.</div></div>`,
 /* 12 Pages click order */`
